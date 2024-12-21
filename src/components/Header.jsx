@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, Button } from '@mui/material';
 
 const Header = () => {
     return (
@@ -24,6 +24,16 @@ const Header = () => {
                     minHeight: '30px',
                 }}
             >
+                                <Box
+                    sx={{
+                        width: '12px',
+                        height: '12px',
+                        background: 'linear-gradient(45deg, #00FFA3, #DC1FFF)',
+                        borderRadius: '50%',
+                        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+                    }}
+                />
+                
                 <Typography
                     variant="h6"
                     sx={{
@@ -35,15 +45,25 @@ const Header = () => {
                 >
                     RecodeAI
                 </Typography>
-                <Box
+
+                     <Button
                     sx={{
-                        width: '12px',
-                        height: '12px',
-                        background: 'linear-gradient(45deg, #00FFA3, #DC1FFF)',
-                        borderRadius: '50%',
-                        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+                        backgroundColor: '#DC1FFF', // Matching color from the gradient
+                        color: '#fff', // White text for contrast
+                        fontWeight: 'bold',
+                        borderRadius: '20px',
+                        padding: '10px 20px',
+                        textTransform: 'none', // Keep the text as is, no uppercase transformation
+                        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)', // Soft button shadow
+                        transition: 'transform 0.2s ease-in-out',
+                        '&:hover': {
+                            backgroundColor: '#00FFA3', // Swap to the other gradient color on hover
+                            transform: 'scale(1.05)', // Slight scale up on hover
+                        },
                     }}
-                />
+                >
+                    Try Now
+                </Button>
             </Toolbar>
         </AppBar>
     );
