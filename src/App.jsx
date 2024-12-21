@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import Header from './header';
+import Header from './components/Header';
 
 const App = () => {
     return (
