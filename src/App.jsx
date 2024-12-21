@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import Header from './components/Header';
 import About from './components/About';
 import ToolBar from './components/ToolBar';
+import CodeEditor from './components/CodeEditor';
 
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
 <About /></div>
 
 <ToolBar />
+<CodeEditor />
 </Box>
 
     );
