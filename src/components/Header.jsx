@@ -1,48 +1,49 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box } from '@mui/material';
 
 const Header = () => {
     return (
         <AppBar
             position="sticky"
             sx={{
-                background: 'rgba(255, 255, 255, 0.3)', 
-                backdropFilter: 'blur(10px)', 
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)', 
-                borderBottom: '1px solid rgba(255, 255, 255, 0.3)', 
-                padding: '10px 20px',
-                borderRadius: '20px',
+                background: 'rgba(255, 255, 255, 0.3)',
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                borderBottom: '1px solid rgba(255, 255, 255, 0.3)',
+                borderRadius: '25px',
+                height: 'fit-content',
+                width: 'fit-content',
             }}
         >
-            <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Toolbar
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: '8px',
+                    minHeight: '30px',
+                }}
+            >
                 <Typography
-                    variant="h5"
+                    variant="h6"
                     sx={{
                         fontWeight: 'bold',
-                        color: '#00BBBF', 
-                        fontFamily: 'Poppins, sans-serif', 
+                        color: '#00BBBF',
+                        fontFamily: 'Poppins, sans-serif',
+                        fontSize: '1.2rem',
                     }}
                 >
-                    SolNFT.
+                    RecodeAI
                 </Typography>
-                <Button
+                <Box
                     sx={{
-                        backgroundColor: '#DC1FFF', 
-                        color: '#fff', 
-                        fontWeight: 'bold',
-                        borderRadius: '20px',
-                        padding: '10px 20px',
-                        textTransform: 'none', // No uppercase
+                        width: '12px',
+                        height: '12px',
+                        background: 'linear-gradient(45deg, #00FFA3, #DC1FFF)',
+                        borderRadius: '50%',
                         boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
-                        transition: 'transform 0.2s ease-in-out',
-                        '&:hover': {
-                            backgroundColor: '#00FFA3', 
-                            transform: 'scale(1.05)', 
-                        },
                     }}
-                >
-                    Placeholder Button
-                </Button>
+                />
             </Toolbar>
         </AppBar>
     );
