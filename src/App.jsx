@@ -2,6 +2,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import Header from './components/Header';
 import About from './components/About';
+import ToolBar from './components/ToolBar';
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
 >  <div style={{'display' : 'flex'}}>    <Header />
 <About /></div>
 
+<ToolBar />
 </Box>
 
     );
