@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { Box } from '@mui/material';
 import Header from './components/Header';
 import About from './components/About';
@@ -6,6 +7,8 @@ import ToolBar from './components/ToolBar';
 import CodeEditor from './components/CodeEditor';
 
 const App = () => {
+    const [result, setResult] = useState(`// Start coding here\nfunction helloWorld() {\n    console.log("Hello, World!");\n}`);
+    const [language, setLanguage] = useState('javascript');
     return (
 <Box
     sx={{
@@ -23,7 +26,7 @@ const App = () => {
 <About /></div>
 
 <ToolBar />
-<CodeEditor />
+<CodeEditor result={result} language={language}/>
 </Box>
 
     );
