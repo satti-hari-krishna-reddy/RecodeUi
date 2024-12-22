@@ -25,7 +25,7 @@ const App = () => {
 >  <div style={{'display' : 'flex'}}>    <Header />
 <About /></div>
 
-<ToolBar />
+<ToolBar setResult={setResult} setLanguage={setLanguage}/>
 <CodeEditor result={result} language={language}/>
 </Box>
 
